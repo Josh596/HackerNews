@@ -1,7 +1,7 @@
 **How to Run the App**
 1. Clone the repository
     ``` 
-      $ git clone https:// 
+      $ git clone https://github.com/Josh596/HackerNews.git
     ```
 2. Create and activate the virtual environment. From the terminal:
    - Mac 
