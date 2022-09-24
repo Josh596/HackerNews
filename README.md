@@ -47,7 +47,7 @@
       ```
    - Windows:
       ```bash
-      (env) $ celery -A core beat -l info --logfile=celery-beat.log
+      (env) $ celery -A core worker -l info --logfile=celery.log
       ```
       ### Then follow the instructions on
       - (https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
