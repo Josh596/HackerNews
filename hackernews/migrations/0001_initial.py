@@ -142,7 +142,9 @@ def load_initial_data(apps, schema_editor):
                     polymorphic_ctype=new_ct)
             except IntegrityError:
                 pass
-    data = Post.get_last_n_post(50)
+
+    minimum_data = 200
+    data = Post.get_last_n_post(200)
     for post in data:
         load_to_db(post)
 
