@@ -53,3 +53,41 @@
       - (https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
 8. Start the web application: `python manage.py runserver`
 
+
+
+# API Routes
+- post/ - [GET]
+  - Filter by type
+    - post/?type={post_type} - [view documentation on hackernews](https://hackernews.api-docs.io/v0/items/get-by-id)
+- post/create - [POST]
+  - Example json 
+      ```json
+      {
+      "by": "justin",
+      "score": 6,
+      "text": "Justin.tv is the biggest live video site on",
+      "time": 1210981217,
+      "title": "Justin.tv is looking for a Lead Flash Engineer!",
+      "type": "job",
+      "url": ""
+      }
+      ```
+- post/update - [POST]
+  - Example json
+      ```json
+      {
+      "id": 234,
+      "by": "justin",
+      "score": 6,
+      "text": "Justin.tv is the biggest live video site on",
+      "time": 1210981217,
+      "title": "Justin.tv is looking for a Lead Flash Engineer!",
+      "url": ""
+      }
+      ```
+- post/delete - [POST]
+  - Example json
+      ```json
+      {"id": 300}
+      ```
+  
