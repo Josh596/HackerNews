@@ -15,9 +15,9 @@ def post_list(request, item_type='all'):
 
     if item_type:
         model = get_model_from_type(item_type)
-        posts = model.objects.not_instance_of(Comment, PollOption)
+        posts = model.objects.all()
     else:
-        posts = PostBase.objects.not_instance_of(Comment, PollOption)
+        posts = PostBase.objects.all()
 
     posts = posts.order_by('time')
     posts_per_page = 30
@@ -66,7 +66,9 @@ def post_search(request, item_type='all'):
         posts = model.objects.filter(
             Q(Story___title__icontains = query) | 
             Q(Job___text__icontains= query) |
-            Q(Poll___title__icontains=query)
+            Q(Poll___title__icontains=query) |
+            Q(Comment___text__icontains=query) |
+            Q(PollOption___text__icontains=query)
         )
     # posts = model.objects.filter(
     #     Q(Story___title__lower__trigram_similar = query) | 

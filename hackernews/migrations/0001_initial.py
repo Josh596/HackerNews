@@ -145,7 +145,34 @@ def load_initial_data(apps, schema_editor):
     data = Post.get_last_n_post(50)
     result = []
     for post in data:
-        load_to_db(post)
+        if post['type'] == 'comment':
+            # Store comment referrence until top level parent is found, then from top level parent, create all comments.
+            comment_train = []
+            comment = post.copy()
+            while comment.get('parent'):
+                comment = Post.get_parent(comment['id'])
+                comment_train.append(comment)
+                # print('getting parent')
+            else:
+                # print('Done to parent')
+                comment_train.append(comment)
+            # reverse the comment_train and load to db.
+            comment_train.reverse()
+            for comment in comment_train:
+                # pass
+                load_to_db(comment)
+            result.extend(comment_train)
+
+        elif post['type'] == 'pollopt':
+            parent = Post.get_parent(post['id'])
+
+            load_to_db(parent)
+            load_to_db(post)
+
+            pass
+        else:
+            result.append(post)
+            load_to_db(post)
 
 class Migration(migrations.Migration):
 
