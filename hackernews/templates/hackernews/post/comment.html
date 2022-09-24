@@ -1,0 +1,13 @@
+
+{% for comment in comments %}
+    <details>
+        <summary class="comment__text">
+            {{comment.text | safe}}
+            <div class="fs-6 text-white fw-light" >by {{comment.by}}</div>
+        </summary>
+        <p>
+            {% include "hackernews/post/comment.html" with comments=comment.kids.all%}
+        </p>
+    </details>
+    
+{% endfor %}

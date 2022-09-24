@@ -1,0 +1,8 @@
+# Ignores any folder that begins with  a period
+.*/ 
+
+**/__pycache__/
+.DS_Store
+# Ignores any folder or file with env in its name
+*env*
+

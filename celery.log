@@ -1,0 +1,44 @@
+[2022-09-24 13:39:55,154: INFO/MainProcess] Connected to redis://localhost:6379//
+[2022-09-24 13:39:55,158: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-24 13:39:56,166: INFO/MainProcess] mingle: all alone
+[2022-09-24 13:39:56,185: WARNING/MainProcess] /Users/Josh/Desktop/Personal-Projects/HackerNews/env/lib/python3.9/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-09-24 13:39:56,185: INFO/MainProcess] celery@Joshs-MacBook-Pro.local ready.
+[2022-09-24 14:24:02,019: INFO/MainProcess] Task sync_db[ce82655c-ee63-47ec-a6fd-6abcac3f73f3] received
+[2022-09-24 14:24:02,022: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:24:02,026: INFO/ForkPoolWorker-8] Task sync_db[ce82655c-ee63-47ec-a6fd-6abcac3f73f3] succeeded in 0.0056062090000068565s: None
+[2022-09-24 14:26:26,942: INFO/MainProcess] Task sync_db[9eccd548-e360-47fe-8184-cd2d5be17654] received
+[2022-09-24 14:26:26,943: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:26:26,945: INFO/ForkPoolWorker-8] Task sync_db[9eccd548-e360-47fe-8184-cd2d5be17654] succeeded in 0.001834667000139234s: None
+[2022-09-24 14:31:26,913: INFO/MainProcess] Task sync_db[a13a39f7-7ef1-4381-9727-287e4b4b51a7] received
+[2022-09-24 14:31:26,914: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:31:26,915: INFO/ForkPoolWorker-8] Task sync_db[a13a39f7-7ef1-4381-9727-287e4b4b51a7] succeeded in 0.0013104160000239062s: None
+[2022-09-24 14:35:19,962: INFO/MainProcess] Task sync_db[2d7528b2-191f-4da8-baed-7addfc98bffa] received
+[2022-09-24 14:35:19,969: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:35:19,971: INFO/ForkPoolWorker-8] Task sync_db[2d7528b2-191f-4da8-baed-7addfc98bffa] succeeded in 0.0032143749999704596s: None
+[2022-09-24 14:36:26,915: INFO/MainProcess] Task sync_db[348e7311-6168-48d9-88cb-cf24e0414cab] received
+[2022-09-24 14:36:26,915: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:36:26,916: INFO/ForkPoolWorker-8] Task sync_db[348e7311-6168-48d9-88cb-cf24e0414cab] succeeded in 0.0010280420001436141s: None
+[2022-09-24 14:37:09,217: INFO/MainProcess] Task sync_db[f5220588-b47a-4d14-95ae-386936a62c85] received
+[2022-09-24 14:37:09,219: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:37:09,220: INFO/ForkPoolWorker-8] Task sync_db[f5220588-b47a-4d14-95ae-386936a62c85] succeeded in 0.0014212500000212458s: None
+[2022-09-24 14:41:26,913: INFO/MainProcess] Task sync_db[cd3e290a-0d0e-4585-8d06-3c2725d23b91] received
+[2022-09-24 14:41:26,914: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:41:26,915: INFO/ForkPoolWorker-8] Task sync_db[cd3e290a-0d0e-4585-8d06-3c2725d23b91] succeeded in 0.0012962079999851994s: None
+[2022-09-24 14:46:26,916: INFO/MainProcess] Task sync_db[117b9f3d-009c-4911-8ab0-4a7cb128a361] received
+[2022-09-24 14:46:26,918: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:46:26,920: INFO/ForkPoolWorker-8] Task sync_db[117b9f3d-009c-4911-8ab0-4a7cb128a361] succeeded in 0.0025447909997637908s: None
+[2022-09-24 14:51:26,913: INFO/MainProcess] Task sync_db[b07ab6a9-ddf4-4140-9281-7cfd2d9d7974] received
+[2022-09-24 14:51:26,914: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:51:26,915: INFO/ForkPoolWorker-8] Task sync_db[b07ab6a9-ddf4-4140-9281-7cfd2d9d7974] succeeded in 0.0012602079996213433s: None
+[2022-09-24 14:53:07,037: INFO/MainProcess] Task sync_db[aa50fc04-1e48-4461-8653-291ee29eed2d] received
+[2022-09-24 14:53:07,038: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:53:07,039: INFO/ForkPoolWorker-8] Task sync_db[aa50fc04-1e48-4461-8653-291ee29eed2d] succeeded in 0.001298625000345055s: None
+[2022-09-24 14:56:26,914: INFO/MainProcess] Task sync_db[7f7464f4-05cb-4785-9ba4-670e338d798f] received
+[2022-09-24 14:56:26,915: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 14:56:26,916: INFO/ForkPoolWorker-8] Task sync_db[7f7464f4-05cb-4785-9ba4-670e338d798f] succeeded in 0.0012455000000954897s: None
+[2022-09-24 15:09:24,349: INFO/MainProcess] Task sync_db[3f969b32-fb50-41f3-9967-a5a90e13b5b1] received
+[2022-09-24 15:09:24,352: WARNING/ForkPoolWorker-8] Executing task
+[2022-09-24 15:09:24,354: INFO/ForkPoolWorker-8] Task sync_db[3f969b32-fb50-41f3-9967-a5a90e13b5b1] succeeded in 0.002606291999654786s: None
