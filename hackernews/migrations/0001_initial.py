@@ -30,9 +30,9 @@ def load_initial_data(apps, schema_editor):
         if post['type'] == 'story':
             # Add to Story Table
             model = models['story']
-            # ContentType = apps.get_model('contenttypes', 'ContentType')
+            ContentType = apps.get_model('contenttypes', 'ContentType')
 
-            # new_ct = ContentType.objects.get_for_model(model)
+            new_ct = ContentType.objects.get_for_model(model)
 
             # model.objects.filter(polymorphic_ctype__isnull=True).update(polymorphic_ctype=new_ct)
 
@@ -43,7 +43,8 @@ def load_initial_data(apps, schema_editor):
                     time=datetime.fromtimestamp(post['time']),
                     title=post['title'],
                     url=post.get('url'),
-                    score=post['score'])
+                    score=post['score'],
+                    polymorphic_ctype=new_ct)
             except IntegrityError:
                 pass
 
@@ -53,9 +54,9 @@ def load_initial_data(apps, schema_editor):
         elif post['type'] == 'job':
             # Add to Job Table
             model = models['job']
-            # ContentType = apps.get_model('contenttypes', 'ContentType')
+            ContentType = apps.get_model('contenttypes', 'ContentType')
 
-            # new_ct = ContentType.objects.get_for_model(model)
+            new_ct = ContentType.objects.get_for_model(model)
 
             # model.objects.filter(polymorphic_ctype__isnull=True).update(polymorphic_ctype=new_ct)
             try:
@@ -65,7 +66,8 @@ def load_initial_data(apps, schema_editor):
                     time=datetime.fromtimestamp(post['time']),
                     text=post['text'],
                     title=post['title'],
-                    url=post.get('url'))
+                    url=post.get('url'),
+                    polymorphic_ctype=new_ct)
             except IntegrityError:
                 pass
 
@@ -74,9 +76,9 @@ def load_initial_data(apps, schema_editor):
         elif post['type'] == 'comment':
             # Add to Comment Table
             model = models['comment']
-            # ContentType = apps.get_model('contenttypes', 'ContentType')
+            ContentType = apps.get_model('contenttypes', 'ContentType')
 
-            # new_ct = ContentType.objects.get_for_model(model)
+            new_ct = ContentType.objects.get_for_model(model)
 
             # model.objects.filter(polymorphic_ctype__isnull=True).update(polymorphic_ctype=new_ct)
             parent_model = models['postbase']
@@ -91,7 +93,8 @@ def load_initial_data(apps, schema_editor):
                     by=post['by'],
                     time=datetime.fromtimestamp(post['time']),
                     parent=parent,
-                    text=post.get('text'))
+                    text=post.get('text'),
+                    polymorphic_ctype=new_ct)
             except IntegrityError:
                 pass
 
@@ -100,9 +103,9 @@ def load_initial_data(apps, schema_editor):
         elif post['type'] == 'poll':
             # Add to poll table
             model = models['poll']
-            # ContentType = apps.get_model('contenttypes', 'ContentType')
+            ContentType = apps.get_model('contenttypes', 'ContentType')
 
-            # new_ct = ContentType.objects.get_for_model(model)
+            new_ct = ContentType.objects.get_for_model(model)
 
             # model.objects.filter(polymorphic_ctype__isnull=True).update(polymorphic_ctype=new_ct)
             try:
@@ -112,7 +115,8 @@ def load_initial_data(apps, schema_editor):
                     time=datetime.fromtimestamp(post['time']),
                     text=post['text'],
                     title=post['title'],
-                    url=post.get('url'))
+                    url=post.get('url'),
+                    polymorphic_ctype=new_ct)
             except IntegrityError:
                 pass
 
@@ -120,9 +124,9 @@ def load_initial_data(apps, schema_editor):
             pass
         elif post['type'] == 'pollopt':
             model = models['pollopt']
-            # ContentType = apps.get_model('contenttypes', 'ContentType')
+            ContentType = apps.get_model('contenttypes', 'ContentType')
 
-            # new_ct = ContentType.objects.get_for_model(model)
+            new_ct = ContentType.objects.get_for_model(model)
 
             # model.objects.filter(polymorphic_ctype__isnull=True).update(polymorphic_ctype=new_ct)
             poll_model = models['poll']
@@ -134,7 +138,8 @@ def load_initial_data(apps, schema_editor):
                     time=datetime.fromtimestamp(post['time']),
                     text=post['text'],
                     score=post['score'],
-                    parent=parent)
+                    parent=parent,
+                    polymorphic_ctype=new_ct)
             except IntegrityError:
                 pass
     data = Post.get_last_n_post(50)
