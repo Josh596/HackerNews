@@ -6,3 +6,9 @@
 # Ignores any folder or file with env in its name
 *env*
 
+db.sqlite3
+celery.beat.log
+celery.log
+celerybeat-schedule.db
+dump.rdb
+
