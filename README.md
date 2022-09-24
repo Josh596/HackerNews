@@ -1,7 +1,7 @@
 **How to Run the App**
 1. Clone the repository
     ``` 
-      $ git clone https://github.com/Josh596/HackerNews.git
+      $ git clone https:// 
     ```
 2. Create and activate the virtual environment. From the terminal:
    - Mac 
@@ -24,17 +24,32 @@
       (env) $ brew install redis
       ```
    - Windows: (https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
-5. Run database migrations: 
+5. Load the env variables
+   ```bash
+      (env) $ touch .env
+   ```
+   - Open the .env file and add a SECRET_KEY variable. The file should look like this
+   ```
+   SECRET_KEY = 'random_key'
+   ```
+6. Run database migrations: 
     ```bash
       # This might take some time, to get the latest 100 posts
       (env) $ python manage.py makemigrations
       (env) $ python manage.py migrate
     ```
 
-6. Start celery and redis:
-   ```bash
-    (env) $ celery -A core worker -B -l info --logfile=celery.log --detach
-    (env) $ redis-server
-   ```
-7. Start the web application: `python manage.py runserver`
+7. Start celery and redis:
+   - Mac
+      ```bash
+      (env) $ celery -A core worker -B -l info --logfile=celery.log --detach
+      (env) $ redis-server
+      ```
+   - Windows:
+      ```bash
+      (env) $ celery -A core beat -l info --logfile=celery-beat.log
+      ```
+      ### Then follow the instructions on
+      - (https://redis.io/docs/getting-started/installation/install-redis-on-windows/)
+8. Start the web application: `python manage.py runserver`
 
